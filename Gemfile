@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 1.2'
 
 group :test do
   gem 'rspec-rails'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem 'webrat'
   gem 'database_cleaner'
 end

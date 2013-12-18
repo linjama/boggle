@@ -7,7 +7,7 @@ When(/^I open Boggle in the browser$/) do
 end
 
 Then(/^I see empty game without letters$/) do
-  pending
+  response.should have_selector("td.letter", count: 16)
 end
 
 Then(/^I see button to generate a new game$/) do
