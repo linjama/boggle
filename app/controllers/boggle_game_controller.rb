@@ -5,9 +5,8 @@ class BoggleGameController < ApplicationController
   end
 
   def update
-    letters = generate_letters('A')
     game = BoggleGame.first
-    game.letters = letters
+    game.generate_letters
     game.save!
     redirect_to action: 'index'
   end

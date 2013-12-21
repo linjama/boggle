@@ -1,3 +1,5 @@
+#coding: utf-8
+
 Given(/^initial status of game$/) do
   @game = BoggleGame.new(letters: '*'*16)
   @game.save!
@@ -9,6 +11,7 @@ When(/^I open Boggle in the browser$/) do
 end
 
 Then(/^I see empty game without letters$/) do
+  page.should have_selector('tr.boggle-row', count: 4)
   page.should have_selector('td.boggle-letter', count: 16)
   page.all('td.boggle-letter').each { |element| element.should have_text('*') }
 end
@@ -23,7 +26,11 @@ When(/^I click 'Start game' button$/) do
   click_button 'Start game'
 end
 
-Then(/^new random set of letters is displayed$/) do
+Then(/^new set of letters is displayed$/) do
   page.should have_selector('td.boggle-letter', count: 16)
-  page.all('td.boggle-letter').each { |element| element.should have_text(/\w/) }
+  page.all('td.boggle-letter').each { |element| element.should have_text(/\w|ä|ö/) }
+end
+
+Then(/^letters are random$/) do
+  pending
 end

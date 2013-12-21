@@ -1,9 +1,11 @@
 <table>
-  <% @letters.each_char do |letter| %>
+  <% (0..3).each do |i| %> 
     <tr class="boggle-row">
+      <% @letters[4*i..4*i+3].each_char do |letter| %>
        <td class="boggle-letter">
           <%= letter %>
         </td>
+      <% end %>
     </tr>
   <% end %>
 </table>
