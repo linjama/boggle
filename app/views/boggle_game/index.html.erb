@@ -1,25 +1,11 @@
 <table>
-  <tr>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-  </tr>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-  </tr>
-  <tr>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-  </tr>
-  <tr>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-    <td class="boggle-letter">X</td>
-  </tr>
+  <% @letters.each_char do |letter| %>
+    <tr class="boggle-row">
+       <td class="boggle-letter">
+          <%= letter %>
+        </td>
+    </tr>
+  <% end %>
 </table>
+
+<%= button_to "Start game", action: "update" %>

@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131218164110) do
+ActiveRecord::Schema.define(version: 20131221114630) do
 
   create_table "boggle_games", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "letters"
   end
 
 end
