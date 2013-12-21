@@ -12,6 +12,6 @@ Feature: Boggle game descriptions
     
   Scenario: Start of new game
     Given initial status of game
-    When I click 'Start game' button
+    When I click 'New game' button
     Then new set of letters is displayed
     And letters are random

@@ -5,7 +5,7 @@ class BoggleGame < ActiveRecord::Base
   
   def generate_letters
     self.letters = Array.new(16) { 
-      generate_random_letter 
+      generate_random_letter
     }.join
     
   end
@@ -26,27 +26,27 @@ class BoggleGame < ActiveRecord::Base
     # Letter frequencies, unit = 1/10000
     # Source www.cs.tut.fi/~korpela/kielikello/kirjtil.html
     {
-      'a' => 1192 ,
-      'i' => 1066 ,
-      't' => 979 ,
-      'n' => 869 ,
-      'e' => 823 ,
-      's' => 787 ,
-      'l' => 567 ,
-      'k' => 535 ,
-      'o' => 525 ,
-      'u' => 507 ,
-      'ä' => 460 ,
-      'm' => 331 ,
-      'v' => 253 ,
-      'r' => 232 ,
-      'j' => 191 ,
-      'h' => 183 ,
-      'y' => 179 ,
-      'p' => 174 ,
-      'd' => 85 ,
-      'ö' => 49 ,
-      'g' => 13
+      'A' => 1192 ,
+      'I' => 1066 ,
+      'T' => 979 ,
+      'N' => 869 ,
+      'E' => 823 ,
+      'S' => 787 ,
+      'L' => 567 ,
+      'K' => 535 ,
+      'O' => 525 ,
+      'U' => 507 ,
+      'Ä' => 460 ,
+      'M' => 331 ,
+      'V' => 253 ,
+      'R' => 232 ,
+      'J' => 191 ,
+      'H' => 183 ,
+      'Y' => 179 ,
+      'P' => 174 ,
+      'D' => 85 ,
+      'Ö' => 49 ,
+      'G' => 13
     }
   end
 end
