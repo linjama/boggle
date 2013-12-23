@@ -2,12 +2,10 @@
 
 class BoggleGame < ActiveRecord::Base
   
-  
   def generate_letters
     self.letters = Array.new(16) { 
       generate_random_letter
     }.join
-    
   end
   
   def generate_random_letter

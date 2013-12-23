@@ -1,5 +1,6 @@
 class BoggleGameController < ApplicationController
   include ApplicationHelper
+  
   def index
     @letters = BoggleGame.first.letters
   end
