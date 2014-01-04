@@ -2,7 +2,6 @@
   <% (0..3).each do |i| %> 
     <tr class="boggle-row">
       <% @letters[4*i..4*i+3].each_char do |letter| %>
-        <% letter_rotation = [0, 90, 180, 270].shuffle[0].to_s+'deg' %>
         <td class="boggle-letter" 
             style="transform: rotate(<%=letter_rotation%>)">
           <%= letter %>
